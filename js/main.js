@@ -108,6 +108,7 @@ class Ui {
 
   dateFormat(date) {
     let dateCreation = new Date(`${date}`);
+    console.log(dateCreation);
     return `${
       dateCreation.getDate() < 10
         ? "0" + dateCreation.getDate()
@@ -140,6 +141,7 @@ class Ui {
   }) {
     let etat = this.checkStatus(status);
     let newDate = this.dateFormat(createdDate);
+    console.log(newDate)
     let tr = document.createElement("tr");
     let idUser = document.createElement("td");
     idUser.textContent = id;
@@ -214,14 +216,14 @@ class Ui {
   validateDate(input) {
     // validation de la date sous forme dd/mm/yyyy
     if (
-      /^([0]?[1-9]|[12]\d|3[01])[/ -]([0]?[1-9]|1[0-2])[/ -](\d){2,4}$/g.test(
+      /^([0]?[1-9]|1[0-2])[/ -]([0]?[1-9]|[12]\d|3[01])[/ -](\d){2,4}$/g.test(
         input.value
       )
     ) {
       this.showMessageError("is valide", input, "success");
       return true;
     } else {
-      this.showMessageError("exp: dd/mm/yyyy", input, "error");
+      this.showMessageError("exp: mm/dd/yyyy", input, "error");
       return false;
     }
   }
@@ -341,6 +343,7 @@ form.addEventListener("submit", function(e) {
       ui.isEmpty();
   } else if(ui.validateNomAndPrenom(inputName) && ui.validateNomAndPrenom(inputPrenom) && ui.validateMatricule(inputRegistartionNumber) && ui.validateNomUtilisateur(inputNomUtilisateur) && ui.validateDate(inputDateCreation) && ui.validateStatus(inputStatus)) {
     const user = new User(ui.generateId(), inputDateCreation.value, inputStatus.value, inputName.value, inputPrenom.value, inputNomUtilisateur.value, inputRegistartionNumber.value);
+    console.log(user)
     ui.addUser(user);
     ui.clearInputs();
     ui.clearSmall();
