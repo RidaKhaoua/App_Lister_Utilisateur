@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- link normalise -->
+    <link rel="stylesheet" href="./css/normalise.css">
+
+    <!-- link font awsome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+
+    <!-- link style css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Ajouter utilisateur</title>
+</head>
+<body>
+    <!-- start add user -->
+    <section class="add-user">
+
+        <!-- start container -->
+        <div class="container">
+            
+            <div class="content">
+                <h1 class="title">Ajout d'utilisateurs</h1>
+                <!-- start form -->
+                <form action="#" id="form-login">
+                    <div class="content-div">
+
+                        <!-- start first div -->
+                        <div class="first-div">
+                            <div class="nom">
+                                <label for="nom">Nom</label>
+                                <input data-input="name" type="text" id="nom">
+                                <small data-name class="error"></small>
+                            </div>
+                            <div class="nom-utilisateur">
+                                <label for="nom-utilisateur">Nom d'utilisateur</label>
+                                <input data-input="nom-utilisateur" type="text" id="nom-utilisateur">
+                                <small data-nom-utilisateur></small>
+                            </div>
+                            <div class="matricule">
+                                <label for="matricule">Matricule</label>
+                                <input data-input="matricule" type="text" id="matricule">
+                                <small data-matricule></small>
+                            </div>
+                        </div>
+                        <!-- end first div -->
+                        
+                        <!-- start second div -->
+                        <div class="second-div">
+                            <div class="prenom">
+                                <label for="prenom">Prénom</label>
+                                <input data-input="prenom"  type="text" id="prenom">
+                                <small data-prenom ></small>
+                            </div>
+                            <div class="date-creation">
+                                <label for="date-creation">date creation</label>
+                                <input data-input = "date" type="text" id="date-creation">
+                                <small data-date ></small>
+                            </div>
+                        </div>
+                        <!-- end second div -->
+                        
+                        <!-- start last div -->
+                        <div class="last-div">
+                            <div class="etat">
+                                <label for="etat">Etat</label>
+                                <input data-input="etat" type="text" id="etat">
+                                <small data-etat></small>
+                            </div>
+                        </div>
+                        <!-- end last div -->
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" value="Enregistrer" id="add_user">
+                    </div>
+
+                </form>
+                <!-- end form -->
+
+            </div>
+            <!-- end content -->
+
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end add user -->
+
+    <!-- start show users -->
+    <section class="show-users">
+
+        <!-- start container -->
+        <div class="container">
+
+            <!-- start table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>date de creation</th>
+                        <th class="etat">etat</th>
+                        <th>nom</th>
+                        <th>prénom</th>
+                        <th>nom d'utilisateur</th>
+                        <th>matricule</th>
+                        <th class="action">action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+    <!-- end show users -->
+
+    <!-- start show form add user-->
+    <section class="show-form">
+        <div class="container">
+            <div class="btn">
+                <button type="button">ajouter utilisateur</button>
+            </div>
+        </div>
+    </section>
+    <!-- end show form -->
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
