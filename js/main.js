@@ -281,11 +281,6 @@ class Ui {
       small.classList.remove("error");
       small.classList.add("success");
       message = `${elemnt.dataset.input} ${msg}`;
-    } else if (className === "warning") {
-      small.classList.remove("error");
-      small.classList.remove("success");
-      small.classList.add("warning");
-      message = msg;
     }
 
     small.textContent = message;
